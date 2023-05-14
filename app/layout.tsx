@@ -11,11 +11,12 @@ import { MixBlendMode, VariantsType } from "@/lib/types/types";
 import { IconContext } from "react-icons";
 import Cursor from "@/components/Cursor";
 import Loading from "./loading";
-import { Fira_Code } from "@next/font/google";
+import { Fira_Code, Inter } from "@next/font/google";
 import { ThemeProvider } from "next-themes";
 import { HiOutlineCursorClick } from "react-icons/hi";
 
 const firacode = Fira_Code({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -115,7 +116,7 @@ export default function RootLayout({
                   <Loading />
                 ) : (
                   <div
-                    className={`${firacode.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#111]`}
+                    className={`${inter.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#111]`}
                   >
                     <Cursor
                       variants={variants}
